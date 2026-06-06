@@ -1,0 +1,25 @@
+.profile {
+  max-width: 650px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile h2 {
+  color: #2563eb;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.profile p {
+  font-size: 18px;
+  margin: 18px 0;
+  color: #374151;
+}
+
+.profile strong {
+  color: #111827;
+}

@@ -1,0 +1,55 @@
+.job-details {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-details h1 {
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.job-details p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.job-details hr {
+  margin: 25px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.job-details h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.job-details input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #1d4ed8;
+}

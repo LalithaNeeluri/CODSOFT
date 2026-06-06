@@ -1,0 +1,34 @@
+.applications {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f4f7fc;
+}
+
+.applications h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.no-apps {
+  text-align: center;
+  font-size: 18px;
+  color: #64748b;
+}
+
+.application-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.application-card h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.application-card p {
+  margin-bottom: 8px;
+}

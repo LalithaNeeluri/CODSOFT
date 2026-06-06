@@ -1,0 +1,44 @@
+.add-job {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.add-job h1 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 25px;
+}
+
+.add-job input,
+.add-job textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.add-job input:focus,
+.add-job textarea:focus {
+  border-color: #2563eb;
+}
+
+.add-job button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-job button:hover {
+  background: #1d4ed8;
+}

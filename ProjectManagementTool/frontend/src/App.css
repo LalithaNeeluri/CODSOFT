@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.project-form button {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.project-card {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.project-card button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.project-card select {
+  margin-left: 10px;
+  padding: 5px;
+}

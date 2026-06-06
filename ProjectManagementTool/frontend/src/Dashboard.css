@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+/* FORM */
+.project-form {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  display: grid;
+  gap: 10px;
+}
+
+.project-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.project-form input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.project-form button {
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-form button:hover {
+  background: #4338ca;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stats h3 {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* SECTION TITLE */
+h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.project-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #eef0f5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.project-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4f46e5;
+  margin-bottom: 6px;
+}
+
+.project-card p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 5px 0;
+}
+
+/* STATUS */
+.project-card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  background: #f9fafb;
+}
+
+/* TASK SECTION */
+.project-card h4 {
+  font-size: 13px;
+  margin-top: 12px;
+  color: #374151;
+}
+
+.project-card input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+}
+
+/* BUTTON */
+.project-card button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #111827;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-card button:hover {
+  background: #1f2937;
+}
+
+/* DELETE BUTTON SPECIAL */
+.project-card button:last-child {
+  background: #ef4444;
+}
+
+.project-card button:last-child:hover {
+  background: #dc2626;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

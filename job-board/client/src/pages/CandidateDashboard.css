@@ -1,0 +1,103 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f8fafc;
+}
+
+.dashboard h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 40px;
+  font-size: 42px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #64748b;
+}
+
+.quick-links {
+  background: white;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.quick-links h3 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quick-links li:hover {
+  background: #2563eb;
+  color: white;
+}
+@media (max-width: 768px) {
+
+  .jobs-grid,
+  .dashboard-cards,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card,
+  .card {
+    width: 100%;
+  }
+
+  .login-card,
+  .register-card,
+  .profile,
+  .job-details,
+  .add-job {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
