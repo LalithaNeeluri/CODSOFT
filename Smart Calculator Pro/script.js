@@ -3,21 +3,21 @@
 let display = document.getElementById("display");
 let historyList = document.getElementById("historyList");
 
-function appendValue(value){
+function appendValue(value) {
     display.value += value;
 }
 
-function clearDisplay(){
+function clearDisplay() {
     display.value = "";
 }
 
-function deleteLast(){
-    display.value = display.value.slice(0,-1);
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
 }
 
-function calculate(){
+function calculate() {
 
-    try{
+    try {
 
         let expression = display.value;
         let result = eval(expression);
@@ -25,44 +25,45 @@ function calculate(){
         let historyItem = document.createElement("li");
         historyItem.textContent = expression + " = " + result;
 
-        historyList.appendChild(historyItem);
+        // Latest calculation appears on top
+        historyList.prepend(historyItem);
 
         display.value = result;
 
     }
-    catch{
+    catch {
         display.value = "Error";
     }
 }
 
-function toggleTheme(){
+function toggleTheme() {
     document.body.classList.toggle("light-mode");
 }
 
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function (event) {
 
     let key = event.key;
 
-    if(
+    if (
         (key >= "0" && key <= "9") ||
         key === "+" ||
         key === "-" ||
         key === "*" ||
         key === "/" ||
         key === "."
-    ){
+    ) {
         appendValue(key);
     }
 
-    else if(key === "Enter"){
+    else if (key === "Enter") {
         calculate();
     }
 
-    else if(key === "Backspace"){
+    else if (key === "Backspace") {
         deleteLast();
     }
 
-    else if(key === "Escape"){
+    else if (key === "Escape") {
         clearDisplay();
     }
 

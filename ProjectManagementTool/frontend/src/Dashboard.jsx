@@ -6,6 +6,7 @@ function Dashboard() {
   const [projects, setProjects] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [deadline, setDeadline] = useState("");
 
   // TASK STATE
   const [taskInputs, setTaskInputs] = useState({});
@@ -46,22 +47,24 @@ function Dashboard() {
 
   // CREATE PROJECT
   const createProject = async () => {
-    try {
-      await axios.post("http://localhost:5000/api/projects", {
-        title,
-        description,
-        status: "Pending",
-      });
+  try {
+    await axios.post("http://localhost:5000/api/projects", {
+      title,
+      description,
+      deadline,
+      status: "Pending",
+    });
 
-      setTitle("");
-      setDescription("");
-      fetchProjects();
-    } catch (error) {
-      console.log(error);
-      alert("Create Project Failed");
-    }
-  };
+    setTitle("");
+    setDescription("");
+    setDeadline("");
 
+    fetchProjects();
+  } catch (error) {
+    console.log(error);
+    alert("Create Project Failed");
+  }
+};
   // DELETE PROJECT
   const deleteProject = async (id) => {
     try {
@@ -124,39 +127,55 @@ function Dashboard() {
 
       {/* PROJECT FORM */}
       <div className="project-form">
-        <input
-          placeholder="Project Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+  <input
+    placeholder="Project Title"
+    value={title}
+    onChange={(e) => setTitle(e.target.value)}
+  />
 
-        <input
-          placeholder="Description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
+  <input
+    placeholder="Description"
+    value={description}
+    onChange={(e) => setDescription(e.target.value)}
+  />
 
-        <button onClick={createProject}>Create Project</button>
-      </div>
+  <input
+    type="date"
+    value={deadline}
+    onChange={(e) => setDeadline(e.target.value)}
+  />
+
+  <button onClick={createProject}>
+    Create Project
+  </button>
+</div>
 
       {/* PROJECT LIST */}
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project._id} className="project-card">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+  <h3>{project.title}</h3>
 
-            {/* STATUS */}
-            <select
-              value={project.status}
-              onChange={(e) =>
-                updateProject(project._id, e.target.value)
-              }
-            >
-              <option>Pending</option>
-              <option>In Progress</option>
-              <option>Completed</option>
-            </select>
+  <p>{project.description}</p>
+
+  <p>
+    <strong>Deadline:</strong>{" "}
+    {project.deadline
+      ? new Date(project.deadline).toLocaleDateString()
+      : "Not Set"}
+  </p>
+
+  {/* STATUS */}
+  <select
+    value={project.status}
+    onChange={(e) =>
+      updateProject(project._id, e.target.value)
+    }
+  >
+    <option>Pending</option>
+    <option>In Progress</option>
+    <option>Completed</option>
+  </select>
 
             {/* TASK INPUT */}
             <div style={{ marginTop: "10px" }}>

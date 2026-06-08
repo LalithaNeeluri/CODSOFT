@@ -6,7 +6,7 @@ function OrderSuccess() {
       <Navbar />
 
       <div className="auth-container">
-        <h1>🎉 Order Placed Successfully!</h1>
+        <h1>Order Placed Successfully!</h1>
 
         <p>
           Thank you for shopping with ShopEZ.
